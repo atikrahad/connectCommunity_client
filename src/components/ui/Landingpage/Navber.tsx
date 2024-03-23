@@ -3,11 +3,10 @@ import Link from "next/link";
 import pageScroll from 'page-scroll';
 import Logo from "@/components/Shared/Logo";
 import { FaArrowUp } from "react-icons/fa6";
-
 const Navber = () => {
     return (
-        <div>
-            <div className="max-w-6xl py-3 flex items-center justify-between mx-auto">
+        <div className="absolute w-full">
+            <div className="max-w-screen-xl py-3 flex items-center justify-between mx-auto">
                 <div>
                     <Logo></Logo>
                 </div>
