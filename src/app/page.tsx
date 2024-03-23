@@ -1,10 +1,9 @@
-import Image from "next/image";
-import Navber from "../Components/Navber";
+import Navber from "@/components/ui/Landingpage/Navber";
 
-export default function landingPage() {
+export default function Home() {
   return (
-    <div className="h-[1000px]">
-      <Navber></Navber>
+    <div>
+      <Navber/>
     </div>
   );
 }

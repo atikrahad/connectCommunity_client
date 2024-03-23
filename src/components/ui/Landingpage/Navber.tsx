@@ -1,9 +1,9 @@
 'use client'
 import Link from "next/link";
 import pageScroll from 'page-scroll';
-import Logo from "@/Components/Logo";
+import Logo from "@/components/Shared/Logo";
 import { FaArrowUp } from "react-icons/fa6";
-import './utility.css'
+
 const Navber = () => {
     return (
         <div>
