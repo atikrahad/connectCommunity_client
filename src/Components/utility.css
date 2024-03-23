@@ -1,0 +1,18 @@
+.nav:hover{
+    color: #0197B2;
+    border: 2px solid #0197B2;
+    border-radius: 5px;
+    padding: 5px;
+}
+.nav{
+    
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
+.navs a.active{
+    
+    border: 2px solid transparent;
+    border-radius: 5px;
+    padding: 5px;
+}
