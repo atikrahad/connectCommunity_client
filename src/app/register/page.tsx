@@ -1,6 +1,6 @@
 import avater from "@/assets/Auth/auth.gif"
 import Logo from "@/components/Shared/Logo";
-import Loginform from "@/components/ui/Auth/Loginform";
+import Registerform from "@/components/ui/Auth/Registerform";
 import Image from "next/image";
 const page = () => {
     return (
@@ -11,7 +11,7 @@ const page = () => {
                 </div>
                 <div className="flex w-[35%] space-y-5 flex-col justify-center items-center">
                     <Logo/>
-                    <Loginform></Loginform>
+                    <Registerform/>
                 </div>
             </div>
         </div>
