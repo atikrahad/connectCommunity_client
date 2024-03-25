@@ -3,14 +3,14 @@ import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASEKEYS_apiKey,
-  authDomain: process.env.FIREBASEKEYS_authDomain,
-  projectId: process.env.FIREBASEKEYS_projectId,
-  storageBucket: process.env.FIREBASEKEYS_storageBucket,
-  messagingSenderId: process.env.FIREBASEKEYS_messagingSenderId,
-  appId: process.env.FIREBASEKEYS_appId
+  apiKey: "AIzaSyD99QwcD0_JQG02dCuubJi0vlVu_JThkk0",
+  authDomain: "bond-box.firebaseapp.com",
+  projectId: "bond-box",
+  storageBucket: "bond-box.appspot.com",
+  messagingSenderId: "763968946331",
+  appId: "1:763968946331:web:9ee26f621ad8302c5f863e"
 };
 
-
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app)
+const auth = getAuth(app)
+export default auth
