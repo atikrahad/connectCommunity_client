@@ -2,7 +2,7 @@ import avater from "@/assets/Auth/auth.gif"
 import Logo from "@/components/Shared/Logo";
 import Loginform from "@/components/ui/Auth/Loginform";
 import Image from "next/image";
-const page = () => {
+const login = () => {
     return (
         <div className="h-screen flex items-center justify-center">
             <div className='max-w-screen-lg flex mx-auto shadow-lg'>
@@ -18,4 +18,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default login;

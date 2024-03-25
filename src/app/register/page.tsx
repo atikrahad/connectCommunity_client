@@ -2,7 +2,7 @@ import avater from "@/assets/Auth/auth.gif"
 import Logo from "@/components/Shared/Logo";
 import Registerform from "@/components/ui/Auth/Registerform";
 import Image from "next/image";
-const page = () => {
+const register = () => {
     return (
         <div className="h-screen flex items-center justify-center">
             <div className='max-w-screen-lg flex mx-auto shadow-lg'>
@@ -18,4 +18,4 @@ const page = () => {
     );
 };
 
-export default page;
+export default register;
