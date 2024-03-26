@@ -1,13 +1,14 @@
 "use client"
 
-import auth from '@/Firebase/firebase';
+import auth from '@/lib/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 
 const Registerform = () => {
+    const route = useRouter()
 
-    
     const handleSignup = async (e: any) => {
         e.preventDefault()
         const form = e.target;
@@ -16,10 +17,11 @@ const Registerform = () => {
         const password = form.password.value;
         const dateOfBirth = form.dateOfBirth.value;
         console.log(name, email, password, dateOfBirth);
-        await createUserWithEmailAndPassword(auth,email, password)
-        .then((res : any) => console.log(res))
-        .catch((error: any)=> console.log(error)
-        )
+        await createUserWithEmailAndPassword(auth, email, password)
+            .then((res: any) => console.log(res))
+            .catch((error: any) => console.log(error)
+            )
+        route.push("/home")
 
     }
 

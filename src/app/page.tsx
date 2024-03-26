@@ -6,10 +6,10 @@ import Ouroffer from "@/components/ui/Landingpage/Ouroffer";
 export default function Home() {
   return (
     <div className="h-[1000px]">
-      <Navber/>
-      <Banner/>
-      <Ouroffer/>
-      <Footer/>
+      <Navber />
+      <Banner />
+      <Ouroffer />
+      <Footer />
     </div>
   );
 }
