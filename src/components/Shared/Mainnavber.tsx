@@ -5,8 +5,9 @@ import Link from 'next/link';
 import { MdGroups2 } from "react-icons/md";
 import { FaWpforms, FaPeopleArrows } from "react-icons/fa6";
 import { CiChat2 } from "react-icons/ci";
-import { logout } from '@/lib/auth';
 import { useRouter } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+import auth from '@/lib/firebase';
 
 
 const Mainnavber = () => {
@@ -24,8 +25,8 @@ const Mainnavber = () => {
                             <div tabIndex={0} role="button" className="btn m-1">Click</div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                                 <li><Link href={"/home/profile"}>Profile</Link></li>
-                                <li><button onClick={() => {
-                                    logout
+                                <li><button onClick={async() => {
+                                    await signOut(auth)
                                     route.push("/login")
                                 }} className='btn'>Logout</button></li>
                             </ul>
@@ -46,8 +47,8 @@ const Mainnavber = () => {
                         <div tabIndex={0} role="button" className="btn m-1">Click</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li><Link href={"/home/profile"}>Profile</Link></li>
-                            <li><button onClick={() => {
-                                logout
+                            <li><button onClick={async() => {
+                                await signOut(auth)
                                 route.push("/login")
                             }} className='btn'>Logout</button></li>
                         </ul>

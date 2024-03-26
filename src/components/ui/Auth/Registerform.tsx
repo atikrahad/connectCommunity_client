@@ -1,5 +1,6 @@
 "use client"
 
+import { useUser } from '@/lib/auth';
 import auth from '@/lib/firebase';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import Link from 'next/link';
@@ -8,7 +9,13 @@ import { useRouter } from 'next/navigation';
 
 const Registerform = () => {
     const route = useRouter()
+    const user = useUser()
 
+    if(user !== null && user !== false){
+        return route.push("/home")
+     }
+
+     
     const handleSignup = async (e: any) => {
         e.preventDefault()
         const form = e.target;

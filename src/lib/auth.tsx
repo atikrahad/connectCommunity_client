@@ -1,14 +1,11 @@
 'use client'
-import { onAuthStateChanged, signOut } from "firebase/auth"
+import { onAuthStateChanged, } from "firebase/auth"
 import { useEffect, useState } from "react"
 import auth from "./firebase"
 
-export const logout = async()=>{
-    return signOut(auth)
-}
 
 export const useUser = () => {
-    const [user, setUser] = useState<any>(null)
+    const [user, setUser] = useState<any | null| false>(false)
     const [loading, setLoading] = useState<boolean>(true)
 
     useEffect(() => {
