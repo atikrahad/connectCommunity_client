@@ -21,7 +21,7 @@ export default function DashboardLayout({
   return (
     <section >
       <Mainnavber />
-<div className="pb-20"></div>
+      <div className="pb-28"></div>
       {children}
     </section>
   )

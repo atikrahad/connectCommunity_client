@@ -24,7 +24,7 @@ const Mainnavber = () => {
                         <div className="dropdown dropdown-end">
                             <div tabIndex={0} role="button" className="btn m-1">Click</div>
                             <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                <li><Link href={"/home/profile"}>Profile</Link></li>
+                                <li><Link href={"/home/profile"}><button className='btn'>Profile</button></Link></li>
                                 <li><button onClick={async() => {
                                     await signOut(auth)
                                     route.push("/login")
@@ -46,7 +46,7 @@ const Mainnavber = () => {
                     <div className="dropdown dropdown-end">
                         <div tabIndex={0} role="button" className="btn m-1">Click</div>
                         <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                            <li><Link href={"/home/profile"}>Profile</Link></li>
+                            <li><Link href={"/home/profile"}><button className='btn'>Profile</button></Link></li>
                             <li><button onClick={async() => {
                                 await signOut(auth)
                                 route.push("/login")
