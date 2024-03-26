@@ -18,10 +18,13 @@ const Registerform = () => {
         const dateOfBirth = form.dateOfBirth.value;
         console.log(name, email, password, dateOfBirth);
         await createUserWithEmailAndPassword(auth, email, password)
-            .then((res: any) => console.log(res))
+            .then((res: any) => {
+                console.log(res);
+
+                route.push("/home")
+            })
             .catch((error: any) => console.log(error)
             )
-        route.push("/home")
 
     }
 
