@@ -19,9 +19,9 @@ export default function DashboardLayout({
   }
 
   return (
-    <section>
+    <section >
       <Mainnavber />
-
+<div className="pb-20"></div>
       {children}
     </section>
   )

@@ -13,7 +13,7 @@ import auth from '@/lib/firebase';
 const Mainnavber = () => {
     const route = useRouter()
     return (
-        <div className="fixed bg-slate-50 shadow-lg w-full p-2 md:py-5">
+        <div className="fixed  z-20 bg-slate-50 shadow-lg w-full p-2 md:py-5">
             <div className='max-w-screen-xl flex-col gap-3 md:flex-row mx-auto flex md:items-center justify-between '>
                 <div className='flex  items-center justify-between'>
                     <div>
