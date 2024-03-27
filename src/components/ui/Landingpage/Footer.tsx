@@ -3,8 +3,9 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className='max-w-screen-md mx-auto '>
-            <footer className=" flex flex-col items-center justify-center">
+        <div className='bg-slate-200'>
+            <div className='max-w-screen-md mx-auto '>
+            <footer className="bg flex flex-col items-center justify-center">
                 <div className='md:flex md:flex-row flex-col items-center w-full py-20 justify-between'>
                     <aside>
                         <Logo></Logo>
@@ -23,6 +24,7 @@ const Footer = () => {
                     <p>Copyright © 2024 - All right reserved by Bond Box</p>
                 </aside>
             </footer>
+        </div>
         </div>
     );
 };

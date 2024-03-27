@@ -1,5 +1,9 @@
 "use client"
 import React from 'react';
+import { FaPhone } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
+import { CiLocationOn } from "react-icons/ci";
+
 
 const Givefeadback = () => {
 const handleFeadback = (e:any)=>{
@@ -18,6 +22,23 @@ const handleFeadback = (e:any)=>{
                     <textarea placeholder='Massage' className='w-full px-3 py-3 h-40 border outline-none rounded-md' name="" id=""></textarea>
                     <input className='btn text-2xl' type="submit" value={"Submit"}/>
                 </form>
+            </div>
+            <div className='flex py-5 items-center justify-between'>
+                <div className='flex flex-col items-center'>
+                    <FaPhone className='text-5xl mb-5 text-green-600'/>
+                    <h1 className='text-3xl font-medium'>Phone</h1>
+                    <p>+8801615406742</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <CiLocationOn className='text-5xl mb-5 text-green-600'/>
+                    <h1 className='text-3xl font-medium'>Location</h1>
+                    <p>Shapahar, Rajshahi, Bangladesh</p>
+                </div>
+                <div className='flex flex-col items-center'>
+                    <MdOutlineEmail className='text-5xl mb-5 text-green-600'/>
+                    <h1 className='text-3xl font-medium'>Email</h1>
+                    <p>rahad.atik1@gmail.com</p>
+                </div>
             </div>
         </div>
     );
