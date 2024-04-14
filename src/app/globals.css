@@ -2,3 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar{
+    background-color: rgba(58, 53, 53, 0.26);
+    width: 10px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+    border-radius: 10px;
+}
