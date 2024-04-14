@@ -3,17 +3,20 @@ import React from 'react';
 import image from "@/assets/banner/image.png"
 import Link from 'next/link';
 
-const Header: React.FC = () => {
+const Header = ({ data }: { data: any }) => {
+
     return (
         <div className='relative'>
             <div className='pb-5 relative'>
-                <Image src={image} alt='cover image'></Image>
+                <Image width={1000} height={0} src={data?.groupCover} alt='cover image'></Image>
 
                 <div className='md:absolute  relative inline-block md:right-[45%] bottom-10 md:-bottom-16'>
-                    <Image className='w-40 rounded-full border-3 h-40' src={image} alt='profile pic'></Image>
-                    <h1 className='text-center text-2xl font-semibold'>Name</h1>
+                    <Image width={100} height={20} className='w-40 rounded-full border-3 h-40' src={data?.groupPic} alt='profile pic'></Image>
+                    <h1 className='text-center text-2xl font-semibold'>{data?.groupName}</h1>
                     <div>
-                        <h1 className='text-center'>Friend 1000</h1>
+                        {
+                            data?.groupName ? <h1 className='text-center'>Group Member {data?.members.length}</h1> : <h1 className='text-center'>Friends 100</h1>
+                        }
                     </div>
                 </div>
             </div>
@@ -23,9 +26,16 @@ const Header: React.FC = () => {
                     <Link href={"/about"}>About</Link>
                     <Link className='md:pr-16' href={"/photos"}>Photos</Link>
 
-                    <Link className='md:pl-16' href={"/photos"}>Friends</Link>
-                    <Link href={"/photos"}>Groups</Link>
-                    <Link href={"/photos"}>Groups</Link>
+                    {
+                        data?.groupName ? <Link className='md:pl-32' href={"/photos"}>Group Members</Link> : <Link className='md:pl-32' href={"/photos"}>Friends</Link>
+                    }
+                    {
+                        data?.groupName ? <button>Join group</button> : <Link className='md:pl-32' href={"/photos"}>Groups</Link>
+                    }
+                    {
+                        data?.groupName ? <button>Invite friends</button> : <Link className='md:pl-32' href={"/photos"}>Friends</Link>
+                    }
+
                 </div>
             </div>
         </div>
